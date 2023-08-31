@@ -12,7 +12,7 @@ To run the project, you have two options:
 2. Navigate to cubeia directory in your terminal
 3. Run the following command to build and start the project:
 
-```
+```console
 docker-compose up --build 
 ```
 
@@ -30,7 +30,7 @@ mysql -h 127.0.0.1 -P 3306 -u root -p
 1. Make sure you have MySQL running locally.
 2. Execute the following command to start the application:
 
-```
+```console
 mvn spring-boot:run 
 ```
 
@@ -40,17 +40,17 @@ mvn spring-boot:run
 
 ### Open an Account
 
-- **URL:**: `/api/accounts`
-- **Method:**: `POST`
-- **Description:**: Open a new account with a specified starting balance and account holder.
-- **Request Body**:
+- **URL:** `/api/accounts`
+- **Method:** `POST`
+- **Description:** Open a new account with a specified starting balance and account holder.
+- **Request Body::**
   ```json
   {
     "startingBalance": 100.0,
     "accountHolder": "John Doe"
   }
   ``` 
-- **Restrictions**: *startingBalance* must be present and positive; *accountHolder* must be present
+- **Restrictions** *startingBalance* must be present and positive; *accountHolder* must be present
 
 #### Successful Response
 
@@ -98,10 +98,10 @@ mvn spring-boot:run
 
 ### Get Transactions for an Account
 
-- **URL**: `/api/transactions/{accountId}`
-- **Method**: `GET`
-- **Description**: Retrieve a list of transactions for a specific account.
-- **Parameters**:
+- **URL** `/api/transactions/{accountId}`
+- **Method** `GET`
+- **Description** Retrieve a list of transactions for a specific account.
+- **Parameters**
 - `accountId`: ID of the account to retrieve transactions for.
 
 #### Successful Response
@@ -143,7 +143,6 @@ mvn spring-boot:run
 - **Content Type:** `application/json`
 - **Body:**
   ```json
-  ```json
   {
     "transactions": [],
     "message": "Account with id: 1 is not present",
@@ -152,10 +151,10 @@ mvn spring-boot:run
 
 ### Create a New Transaction
 
-- **URL:**: `/api/accounts`
-- **Method:**: `POST`
-- **Description:**: Create a new accounting transaction.
-- **Request Body**:
+- **URL:** `/api/accounts`
+- **Method:** `POST`
+- **Description:** Create a new accounting transaction.
+- **Request Body::**
   ```json
   {
     "amount": 1.1,
@@ -163,7 +162,7 @@ mvn spring-boot:run
     "toAccountId": 1
   }
   ```
-- **Restrictions**: *amount* must be present and positive; *fromAccountId* must be present; ; *toAccountId* must be present
+- **Restrictions** *amount* must be present and positive; *fromAccountId* must be present; ; *toAccountId* must be present
 
 #### Successful Response
 
