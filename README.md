@@ -17,8 +17,9 @@ docker-compose up --build
 ```
 
 #### Connecting to mysql running inside of docker
-1. Navigate to cubeia directory in your terminal
-2. Run the following commands
+1. Clone this repo
+2. Navigate to cubeia directory in your terminal
+3. Run the following commands
 
 ```console
 docker exec -it mysql bash
@@ -26,9 +27,9 @@ mysql -h 127.0.0.1 -P 3306 -u root -p
 ```
 
 ### Running Locally
-
-1. Make sure you have MySQL running locally.
-2. Execute the following command to start the application:
+1. Clone this repo
+2. Make sure you have Maven and MySQL running locally
+3. Execute the following command to start the application
 
 ```console
 mvn spring-boot:run 
@@ -59,7 +60,7 @@ mvn spring-boot:run
 - **Body:**
   ```json
   {
-    "message": "uccessfully created account with id: 1 with starting amount: 123.456"
+    "message": "unsuccessfully created account with id: 1 with starting amount: 123.456"
   }
   ```
 
