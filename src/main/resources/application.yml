@@ -1,0 +1,14 @@
+server:
+  port: 5001
+spring:
+  application:
+    name: cubeia-accounting
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:accounting}?createDatabaseIfNotExist=true
+    username: root
+    password: 1234

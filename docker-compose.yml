@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  mysql:
+    container_name: mysql
+    image: mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - "mysql_data:/var/lib/mysql"
+    environment:
+      - MYSQL_ROOT_USER=root
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=accounting
+    networks:
+      - cubeia-network
+
+  cubeia-accounting:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    container_name: cubeia-accounting
+    ports:
+      - "5001:5001"
+    environment:
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_NAME=accounting
+    networks:
+      - cubeia-network
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  cubeia-network:
+    name: cubeia-network
