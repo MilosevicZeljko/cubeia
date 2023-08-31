@@ -1,7 +1,6 @@
 package com.accounting.cubeia.cubeia.response;
 
 import com.accounting.cubeia.cubeia.dto.TransactionDTO;
-import com.accounting.cubeia.cubeia.entity.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +11,10 @@ public class GetTransactionsResponse {
     String message;
 
     Integer size;
+
     public GetTransactionsResponse() {
     }
+
     public GetTransactionsResponse(String message) {
         this.transactions = new ArrayList<>();
         this.message = message;
@@ -49,7 +50,6 @@ public class GetTransactionsResponse {
     public void setSize(Integer size) {
         this.size = size;
     }
-
 
 
 }

@@ -11,7 +11,6 @@ import com.accounting.cubeia.cubeia.response.GetTransactionsResponse;
 import com.accounting.cubeia.cubeia.response.TransferFundsResponse;
 import com.google.gson.Gson;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;

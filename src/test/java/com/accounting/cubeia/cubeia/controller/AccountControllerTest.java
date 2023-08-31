@@ -58,7 +58,6 @@ class AccountControllerTest {
         var createAccountJson = new Gson().toJson(createAccount);
 
 
-
         mockMvc.perform(MockMvcRequestBuilders.post("/api/accounts/")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(createAccountJson))
@@ -74,7 +73,6 @@ class AccountControllerTest {
         var createAccountJson = new Gson().toJson(createAccount);
 
 
-
         mockMvc.perform(MockMvcRequestBuilders.post("/api/accounts/")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(createAccountJson))
@@ -88,7 +86,6 @@ class AccountControllerTest {
     public void testOpenAccount_withoutAccountHolderAndNegativeStartingAmount() throws Exception {
         var createAccount = new CreateAccount(-100.0, "");
         var createAccountJson = new Gson().toJson(createAccount);
-
 
 
         mockMvc.perform(MockMvcRequestBuilders.post("/api/accounts/")
