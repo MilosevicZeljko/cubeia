@@ -34,6 +34,7 @@ mysql -h 127.0.0.1 -P 3306 -u root -p
 mvn spring-boot:run 
 ```
 
+### There is postman collection inside of postman folder, import it in Postman application
 
 ## Endpoints
 
