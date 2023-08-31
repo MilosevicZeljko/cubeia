@@ -9,5 +9,5 @@ public class CubeiaApplication {
     public static void main(String[] args) {
         SpringApplication.run(CubeiaApplication.class, args);
     }
-    // TODO round balance to 2 decimals
+
 }
